@@ -1,0 +1,60 @@
+:root {
+  --bg: #f4f6f8;
+}
+
+html,body,#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--bg), #e9eef3);
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.split-line {
+  position: absolute;
+  background: rgba(0,0,0,0.12);
+  z-index: 2000;
+  pointer-events: none;
+}
+.split-line.vertical {
+  width: 2px;
+  top: 0;
+  bottom: 0;
+}
+.split-line.horizontal {
+  height: 2px;
+  left: 0;
+  right: 0;
+}
+
+.pill {
+  transition: box-shadow 0.08s ease;
+}
+.pill:active {
+  cursor: grabbing;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* drawing preview */
+.drawing-preview {
+  background: rgba(0,0,0,0.02);
+}
+
+/* info bubble */
+.info {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.9);
+  border: 2px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  font-size: 13px;
+  z-index: 3000;
+}
